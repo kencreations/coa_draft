@@ -46,8 +46,6 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] == true) {
     <main>
 
 
-        s
-
 
         <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
             <div class="container">
@@ -110,86 +108,8 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] == true) {
         </section>
 
 
-        <section class="py-lg-5"></section>
 
 
-        <section id="section_1">
-
-            <!-- left image -->
-            <div class="blog-card">
-                <div class="meta">
-                    <div class="photo"
-                        style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)">
-                    </div>
-                    <ul class="details">
-                        <li class="author text-white"><a href="#">Mrs. Liene</a></li>
-                        <li class="date text-white">July. 15, 2015</li>
-                        <li class="tags text-white">
-                            <ul>
-                                <li><a href="#" class="text-white">sec 1</a></li>
-                                <li><a href="#" class="text-white">sec 2</a></li>
-                                <li><a href="#" class="text-white">sec 3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="description">
-                    <h1>Learning to Coa</h1>
-                    <h2>Opening a door to the future</h2>
-                    <p> Audit report on the results of audit of a national government agency with Regional
-                        Offices and field/operating units; and for a government corporation with regional branches
-                        and/or field offices.
-                        Audit report on the results of audit of the regional/branch office, field/operating unit,
-                        staff bureau and line office with complete set of books of accounts; or an audit report on
-                        agencies
-                        with complete set of books of accounts but no financial statements submitted as of the deadline
-                        set
-                        by COA and league/federation of local government units and local elective officials.</p>
-                    <p class="read-more">
-                        <a href="#">Read More</a>
-                    </p>
-                </div>
-            </div>
-            <!-- left image end  -->
-
-
-            <!-- rigt image  -->
-            <div class="blog-card alt">
-                <div class="meta">
-                    <div class="photo"
-                        style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)">
-                    </div>
-                    <ul class="details">
-                        <li class="author text-white"><a href="#">Mrs. Liene</a></li>
-                        <li class="date text-white">July. 15, 2015</li>
-                        <li class="tags text-white">
-                            <ul>
-                                <li><a href="#" class="text-white">sec 1</a></li>
-                                <li><a href="#" class="text-white">sec 2</a></li>
-                                <li><a href="#" class="text-white">sec 3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="description">
-                    <h1>Mastering the Tasks</h1>
-                    <h2>Java is not the same as JavaScript</h2>
-                    <p>Audit report on the results of audit of a national government agency with Regional
-                        Offices and field/operating units; and for a government corporation with regional branches
-                        and/or field offices.
-                        Audit report on the results of audit of the regional/branch office, field/operating unit,
-                        staff bureau and line office with complete set of books of accounts; or an audit report on
-                        agencies
-                        with complete set of books of accounts but no financial statements submitted as of the deadline
-                        set
-                        by COA and league/federation of local government units and local elective officials.</p>
-                    <p class="read-more">
-                        <a href="#">Read More</a>
-                    </p>
-                </div>
-            </div>
-            <!-- right image end  -->
-        </section>
 
 
         <section class="book-section section-padding" id="section_2">
@@ -234,25 +154,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] == true) {
                         <h2 class="mb-5">Preview at glance</h2>
                     </div>
 
-                    <div class="col-lg-4 col-12">
-                        <nav id="navbar-example3" class="h-100 flex-column align-items-stretch">
-                            <nav class="nav nav-pills flex-column">
-                                <a class="nav-link smoothscroll" href="#item-1">Introduction</a>
-
-                                <a class="nav-link smoothscroll" href="#item-2">Chapter 1: <strong>Win back your
-                                        time</strong></a>
-
-                                <a class="nav-link smoothscroll" href="#item-3">Chapter 2: <strong>Work less, do
-                                        more</strong></a>
-
-                                <a class="nav-link smoothscroll" href="#item-4">Chapter 3: <strong>Delegate</strong></a>
-
-                                <a class="nav-link smoothscroll" href="#item-5">Chapter 4: <strong>Habits</strong></a>
-                            </nav>
-                        </nav>
-                    </div>
-
-                    <div class="col-lg-8 col-12">
+                    <div class="col-lg-12 col-12 p-5">
                         <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
                             class="scrollspy-example-2" tabindex="0">
                             <div class="scrollspy-example-item" id="item-1">
