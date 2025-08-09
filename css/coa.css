@@ -2,7 +2,7 @@
 	--white-color: #ffffff;
 	--primary-color: #182c86;
 	--secondary-color: #3a4bb3; 
-	--section-bg-color: #eef1fb; 
+	--section-bg-color: #182c86; 
 	--custom-btn-bg-color: #182c86;
 	--custom-btn-bg-hover-color: #0f1f66; 
 	--dark-color: #000000;
@@ -60,7 +60,6 @@ h6 {
 }
 
 h1 {
-	color: var(--primary-color);
 	font-size: var(--h1-font-size);
 	font-weight: var(--font-weight-bold);
 }
@@ -775,7 +774,7 @@ strong {
 
 .blockquote::before {
 	content: "“";
-	color: var(--custom-btn-bg-color);
+	color: #ffffff;
 	font-size: 100px;
 	line-height: 1rem;
 	display: block;
