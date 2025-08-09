@@ -40,6 +40,28 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] == true) {
 </head>
 
 <body>
+<!--NavBar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute top-0 w-100">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item me-4">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item me-4">
+          <a class="nav-link" href="#section_announcements">Announcement</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.php">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 
 
