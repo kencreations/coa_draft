@@ -41,7 +41,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] == true) {
 
 <body>
     <!--NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute top-0 w-100">
+    <nav class="navbar navbar-expand-lg bg-transparent position-absolute top-0 w-100">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,7 +77,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] == true) {
 
                         <h6>Introducing Coa</h6>
 
-                        <h1 class="text-white mb-4">COA TSO Special Services Assignment Tracker</h1>
+                        <h1 class="mb-4">COA TSO Special Services Assignment Tracker</h1>
 
                         <a href="#section_2" class="btn custom-btn smoothscroll me-3">Discover More</a>
 
