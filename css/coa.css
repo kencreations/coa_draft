@@ -756,17 +756,7 @@ strong {
 	display: block;
 }
 
-/*---------------------------------------
-  AUTHOR SECTION            
------------------------------------------*/
-.author-section {
-	background-image: url("../images/circle-scatter-haikei.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: left bottom;
-	position: relative;
-	margin-top: 50px;
-}
+
 
 .author-image {
 	border: 10px solid var(--secondary-color);

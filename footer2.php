@@ -1,4 +1,4 @@
-<section class="call-to-action text-white text-center p-3" id="signup" style="background-color: #f4a261;"
+<section class="call-to-action text-white text-center p-3" id="signup" style="background-color: #182c86;"
     bis_label="style">
     <div class="container position-relative">
         <div class="row justify-content-center">
