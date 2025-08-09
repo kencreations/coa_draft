@@ -75,9 +75,9 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] == true) {
 
                     <div class="col-lg-6 col-12 mb-5 pb-5 pb-lg-0 mb-lg-0">
 
-                        <h6>Introducing Coa</h6>
+                        <h6>Introducing COA</h6>
 
-                        <h1 class="mb-4">COA TSO Special Services Assignment Tracker</h1>
+                        <h1 class="mb-4">COA TSO Special Services!</h1>
 
                         <a href="#section_2" class="btn custom-btn smoothscroll me-3">Discover More</a>
 
@@ -85,7 +85,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] == true) {
                     </div>
 
                     <div class="hero-image-wrap col-lg-6 col-12 mt-3 mt-lg-0">
-                        <img src="images/Atlantis A25.png" class="hero-image img-fluid"
+                        <img src="images/coalogo.png" class="hero-image img-fluid"
                             alt="COA TSO Special Services Assignment Tracker">
                     </div>
 

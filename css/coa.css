@@ -60,6 +60,7 @@ h6 {
 }
 
 h1 {
+	color: var(--primary-color);
 	font-size: var(--h1-font-size);
 	font-weight: var(--font-weight-bold);
 }
@@ -186,7 +187,7 @@ strong {
 	cursor: pointer;
 	position: relative;
 	white-space: nowrap;
-	color: var(--white-color);
+	color: #182c86;
 }
 
 .link::before,
@@ -392,6 +393,30 @@ strong {
 /*---------------------------------------
   NAVIGATION              
 -----------------------------------------*/
+
+.navbar-nav .nav-link {
+  position: relative;
+  padding-bottom: 5px; /* space for the underline */
+  color: #182c86;
+  transition: color 0.5s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #182c86;
+  transition: width 0.5s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
 .sticky-wrapper {
 	position: absolute;
 	top: 0;
@@ -1040,7 +1065,7 @@ strong {
 }
 
 .org {
-	background-color: #f4a261;
+	background-color: #182c86;
 	width: 100%;
 	padding: 20px;
 }
