@@ -1,0 +1,421 @@
+<?php
+
+
+if (isset($_SESSION['login_success']) && $_SESSION['login_success'] == true) {
+  $showToastr = true;
+  unset($_SESSION['login_success']);
+} else {
+  $showToastr = false;
+}
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>COA TSO Special Services Assignment Tracker</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/bootstrap-icons.css" rel="stylesheet" />
+
+        <link href="css/coa.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
+        />
+
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+
+    <body>
+        <nav
+            class="navbar navbar-expand-lg navbar position-absolute top-0 w-100"
+        >
+            <div class="container">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item me-4">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="index.php"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="#section_announcements"
+                                >Announcement</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                data-bs-toggle="modal"
+                                data-bs-target="#loginModal"
+                                >Login</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div
+            class="modal fade"
+            id="loginModal"
+            tabindex="-1"
+            aria-labelledby="loginModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+
+                    <form id="loginForm" class="form">
+                        <div class="modal-body">
+                            <div class="response"></div>
+                            <div class="mb-3">
+                                <label>Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    class="form-control"
+                                    required
+                                />
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Password</label>
+                                <input
+                                    type="password"
+                                    name="password"
+                                    class="form-control"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">
+                                Login
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <section class="hero-section" id="section_1" style="padding: 0">
+                <img
+                    src="assets/img/hero.png"
+                    alt=""
+                    srcset=""
+                    style="width: 100vw; height: 100vh"
+                />
+            </section>
+
+            <section class="book-section section-padding" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center">
+                            <h6>What's inside?</h6>
+
+                            <h2 class="mb-5">ABOUT COA</h2>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="book-section-info">
+                                <h2 class="mb-4">Vision</h2>
+
+                                <p>
+                                    A trustworthy, respected and inipendent
+                                    audit institution that is an enabling
+                                    partner of government in ensuring a better
+                                    for every Filipino.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="book-section-info">
+                                <h2 class="mb-4">Mission</h2>
+
+                                <p>
+                                    To ensure accountability for public
+                                    resources, promote transparency, and elp
+                                    imporve governmentoperations, in partnership
+                                    with stake holders, for the benefit of the
+                                    Filipino people
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding" id="section_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="book-section-info">
+                                <h2 class="mb-4">KEY SERVICES</h2>
+
+                                <p>
+                                    Ipsum duis enim laborum ex adipisicing. Ea
+                                    cupidatat ut officia id magna. Aute ut sunt
+                                    excepteur ex excepteur sunt et cillum
+                                    voluptate consequat consequat duis. Deserunt
+                                    nulla qui incididunt ut laborum irure tempor
+                                    ex laborum tempor amet magna mollit.
+                                    Incididunt esse sit id officia labore ipsum
+                                    veniam deserunt laborum occaecat adipisicing
+                                    minim Lorem.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 text-center">
+                            <img
+                                alt="Diagram showing Key Services with circles labeled Audit Services, Technical Services, Legal and Adjudication, Training Services, Other Services"
+                                class="w-full rounded-md"
+                                height="300"
+                                src="https://storage.googleapis.com/a1aa/image/c51dfdcd-2c7b-4146-3614-d82f242acb83.jpg"
+                                width="300"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="book-section section-padding" id="section_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center">
+                            <h2 class="mb-5">COA KEY OFFICIALS</h2>
+                        </div>
+
+                        <img
+                            src="images/officials.png"
+                            alt=""
+                            class="img-fluid"
+                            width="100%"
+                            height="auto"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section class="reviews-section section-padding" id="section_4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center mb-5">
+                            <h6>Commision on Audit</h6>
+
+                            <h2>Organization Chart</h2>
+                            <p>
+                                Illustrates the hierarchical structure of the
+                                Commission on Audit, depicting the various
+                                officers and sectors within the organization.
+                            </p>
+                        </div>
+                        <div class="org">
+                            <img
+                                src="images/coa-orgchart-new.png"
+                                class="scrollspy-example-item-image img-fluid mb-3"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Footer Section -->
+
+            <section
+                class="co-facilitator-section py-5"
+                style="background-color: #212163"
+            >
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Left Column (Title + Image) -->
+                        <div class="col-md-5 text-center mb-4 mb-md-0">
+                            <h2
+                                class="fw-bold text-uppercase mb-4"
+                                style="color: #ffd21b"
+                            >
+                                Co-Facilitator
+                            </h2>
+
+                            <img
+                                src="images/portrait-mature-smiling-authoress-sitting-desk.jpg"
+                                alt="Co-Facilitator"
+                                class="img-fluid rounded-circle shadow"
+                                style="max-width: 300px; height: 300px"
+                            />
+                        </div>
+
+                        <!-- Right Column (Text Bubbles) -->
+                        <div class="col-md-7">
+                            <!-- Bubble 1 -->
+                            <div class="bg-light p-4 rounded-3 shadow mb-4">
+                                <h5 class="fw-bold text-danger mb-2">
+                                    Engr. Liene Stephanie Nadonga, REE
+                                </h5>
+                                <p class="mb-0" style="color: #00114d">
+                                    <em
+                                        >Engr. Nadonga earned her Bachelor of
+                                        Science in Electrical Engineering degree
+                                        from the University of Santo Tomas in
+                                        2015 and successfully passed the
+                                        Registered Electrical Engineer (REE)
+                                        board examination in the same year.</em
+                                    >
+                                </p>
+                            </div>
+
+                            <!-- Bubble 2 -->
+                            <div class="bg-light p-4 rounded-3 shadow mb-4">
+                                <p class="mb-0" style="color: #00114d">
+                                    <em
+                                        >In November 2017, she joined the
+                                        Commission on Audit, where she has since
+                                        continued to apply her expertise in
+                                        engineering audit and public service. In
+                                        April 2021, she became one of the
+                                        pioneering members of the Special
+                                        Services Division.</em
+                                    >
+                                </p>
+                            </div>
+
+                            <!-- Bubble 3 -->
+                            <div class="bg-light p-4 rounded-3 shadow">
+                                <p class="mb-0" style="color: #00114d">
+                                    <em
+                                        >Currently serving as a State Technical
+                                        Audit Specialist I under Special
+                                        Services in TSO, she upholds excellence
+                                        in public service while pursuing a law
+                                        degree at the University of Santo Tomas,
+                                        combining technical expertise with legal
+                                        proficiency to drive accountability and
+                                        integrity in government projects.</em
+                                    >
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <?php
+    include('./footer2.php');
+    ?>
+        </main>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            document
+                .getElementById("loginForm")
+                .addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    const form = this;
+                    const formData = new FormData(form);
+                    const response = document.querySelector(".response");
+
+                    const oldAlert = document.getElementById("login-alert");
+                    if (oldAlert) oldAlert.remove();
+
+                    fetch("backend/login.php", {
+                        method: "POST",
+                        body: formData,
+                    })
+                        .then(async (res) => {
+                            const text = await res.text();
+                            console.log("Raw response:", text);
+                            try {
+                                const data = JSON.parse(text);
+                                if (data.success) {
+                                    const success =
+                                        document.createElement("div");
+                                    success.className =
+                                        "alert alert-success mt-3";
+                                    success.textContent = data.message;
+                                    success.id = "login-alert";
+                                    response.appendChild(success);
+
+                                    setTimeout(() => {
+                                        window.location.href =
+                                            data.redirect || "dashboard.php";
+                                    }, 1200);
+                                } else {
+                                    const error = document.createElement("div");
+                                    error.className = "alert alert-danger mt-3";
+                                    error.textContent = data.message;
+                                    error.id = "login-alert";
+                                    response.appendChild(error);
+                                }
+                            } catch (err) {
+                                console.error("JSON parse error:", err);
+                                const fallback = document.createElement("div");
+                                fallback.className = "alert alert-danger mt-3";
+                                fallback.textContent =
+                                    "Invalid JSON response from server.";
+                                fallback.id = "login-alert";
+                                form.parentNode.appendChild(fallback);
+                            }
+                        })
+                        .catch((error) => {
+                            console.error("Fetch error:", error);
+                            const fallback = document.createElement("div");
+                            fallback.className = "alert alert-danger mt-3";
+                            fallback.textContent =
+                                "Something went wrong. Try again later.";
+                            fallback.id = "login-alert";
+                            form.parentNode.appendChild(fallback);
+                        });
+                });
+        </script>
+    </body>
+</html>
